@@ -16,6 +16,8 @@ namespace Shop.Api
             builder.Services.AddEndpointsApiExplorer();
 
             builder.Services.RegisterContext(builder.Configuration);
+            builder.Services.RegisterRepositories();
+            builder.Services.RegisterServices();
 
             var app = builder.Build();
 

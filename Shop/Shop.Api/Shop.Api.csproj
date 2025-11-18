@@ -16,11 +16,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shop.Contracts\Shop.Contracts.csproj" />
+    <ProjectReference Include="..\Shop.Services\Shop.Services.csproj" />
     <ProjectReference Include="..\Shop.Storage\Shop.Storage.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

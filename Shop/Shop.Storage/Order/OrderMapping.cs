@@ -14,7 +14,7 @@
 			builder.Property(x => x.CreatedOn).HasColumnName("CreatedOn").HasColumnType("smalldatetime").IsRequired();
 			builder.Property(x => x.DeletedOn).HasColumnName("DeletedOn").HasColumnType("smalldatetime");
 			builder.Property(x => x.CustomerId).HasColumnName("CustomerFk").HasColumnType("int").IsRequired();
-			builder.Property(x => x.Status).HasColumnName("Status").HasColumnType("nvarchar(50)").IsRequired();
+			builder.Property(x => x.Status).HasColumnName("Status").HasColumnType("int").IsRequired();
 
 			builder.HasMany(x => x.OrderItems).WithOne(x => x.Order).HasForeignKey(x => x.OrderId);
 

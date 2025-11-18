@@ -10,7 +10,7 @@
 
 		public int CustomerId { get; private set; }
 
-		public string Status { get; private set; }
+		public int Status { get; private set; }
 
 		public Customer Customer { get; private set; }
 
