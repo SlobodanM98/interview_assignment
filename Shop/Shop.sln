@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36705.20 d17.14
+VisualStudioVersion = 17.14.36705.20
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Api", "Shop.Api\Shop.Api.csproj", "{E4947797-F5EB-4B6D-A9D8-57A84B182127}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Storage", "Shop.Storage\Shop.Storage.csproj", "{C25C3AB8-68A2-43B0-A8F4-B8C29BC6D905}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Services", "Shop.Services\Shop.Services.csproj", "{D19DFB1B-C1F6-4DA6-98CE-BF805EA455BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Client", "Shop.Client\Shop.Client.csproj", "{05259B63-7A41-4E4A-8376-2C4567ED8E16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D19DFB1B-C1F6-4DA6-98CE-BF805EA455BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D19DFB1B-C1F6-4DA6-98CE-BF805EA455BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D19DFB1B-C1F6-4DA6-98CE-BF805EA455BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05259B63-7A41-4E4A-8376-2C4567ED8E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05259B63-7A41-4E4A-8376-2C4567ED8E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05259B63-7A41-4E4A-8376-2C4567ED8E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05259B63-7A41-4E4A-8376-2C4567ED8E16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

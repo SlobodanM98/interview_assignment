@@ -1,0 +1,38 @@
+﻿@using Shop.Client.Models.Enumerations
+@model List<Shop.Client.Models.ProductViewModel>
+
+@{
+    SortBy sortBy = (SortBy)ViewBag.SortBy;
+}
+
+<form method="get">
+    <select name="sortBy" class="form-select">
+        <option value="VolumeSold" selected="@(sortBy == SortBy.VolumeSold)">By Volume Sold</option>
+        <option value="DollarAmountSold" selected="@(sortBy == SortBy.DollarAmountSold)">By Dollar Amount Sold</option>
+    </select>
+    <button type="submit">Apply</button>
+</form>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Current Price</th>
+            <th>Total Dollar Amount Sold</th>
+            <th>Volume Sold</th>
+            <th>Created On</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Name</td>
+            <td>@p.CurrentPrice</td>
+            <td>@p.TotalDollarAmountSold</td>
+            <td>@p.VolumeSold</td>
+            <td>@p.CreatedOn.ToString("yyyy-MM-dd")</td>
+        </tr>
+    }
+    </tbody>
+</table>
