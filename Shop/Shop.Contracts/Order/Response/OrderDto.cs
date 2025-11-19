@@ -2,6 +2,10 @@
 {
 	public class OrderDto
 	{
+		public DateTime CreatedOn { get; set; }
+
+		public string CustomerFullName { get; set; }
+
 		public IEnumerable<OrderItemDto> Items { get; set; } = [];
 
 		public class OrderItemDto

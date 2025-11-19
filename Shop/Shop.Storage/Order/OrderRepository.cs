@@ -19,8 +19,11 @@
 										&& x.Status == ((int)OrderStatus.Open))
 				.Include(x => x.OrderItems)
 					.ThenInclude(x => x.Product)
+				.Include(x => x.Customer)
 				.Select(x => new OrderDto()
 				{
+					CreatedOn = x.CreatedOn,
+					CustomerFullName = $"{x.Customer.FirstName} {x.Customer.LastName}",
 					Items = x.OrderItems.Select(y => new OrderDto.OrderItemDto()
 					{
 						ProductName = y.Product.Name,

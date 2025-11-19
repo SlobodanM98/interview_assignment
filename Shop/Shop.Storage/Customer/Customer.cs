@@ -7,6 +7,20 @@
 	{
 		public Customer() { }
 
+		public Customer(
+			int id,
+			Guid uid,
+			DateTime createdOn,
+			DateTime? deletedOn,
+			string firstName,
+			string lastName,
+			string email) : base(id, uid, createdOn, deletedOn)
+		{
+			FirstName = firstName;
+			LastName = lastName;
+			Email = email;
+		}
+
 		public string FirstName { get; private set; }
 
 		public string LastName { get; private set; }

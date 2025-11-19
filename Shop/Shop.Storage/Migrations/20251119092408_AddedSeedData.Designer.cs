@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shop.Storage.Context;
 
@@ -11,9 +12,11 @@ using Shop.Storage.Context;
 namespace Shop.Storage.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
-    partial class ShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251119092408_AddedSeedData")]
+    partial class AddedSeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,7 +71,7 @@ namespace Shop.Storage.Migrations
                             Email = "nikola@gmail.com",
                             FirstName = "Nikola",
                             LastName = "Nikolic",
-                            Uid = new Guid("b852a0d3-7051-4109-ba7a-850d483896d1")
+                            Uid = new Guid("03cd14e0-0fcf-40d5-8c09-14f045f2199c")
                         },
                         new
                         {
@@ -77,7 +80,7 @@ namespace Shop.Storage.Migrations
                             Email = "stefan@gmail.com",
                             FirstName = "Stefan",
                             LastName = "Stefanovic",
-                            Uid = new Guid("411eb0e7-a369-48a1-b60e-542781126882")
+                            Uid = new Guid("7234d4a4-eb61-43a0-ada7-061f3aa7b482")
                         });
                 });
 
@@ -121,7 +124,7 @@ namespace Shop.Storage.Migrations
                             CreatedOn = new DateTime(2025, 5, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CustomerId = 1,
                             Status = 1,
-                            Uid = new Guid("261230e5-4079-4abe-9bfd-df1a37c875ba")
+                            Uid = new Guid("041b7c64-cda8-443d-abe2-623db850789b")
                         },
                         new
                         {
@@ -129,7 +132,7 @@ namespace Shop.Storage.Migrations
                             CreatedOn = new DateTime(2025, 10, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CustomerId = 1,
                             Status = 0,
-                            Uid = new Guid("15995e4c-dde8-4489-9e25-efac2cb553f9")
+                            Uid = new Guid("8906e152-40e2-4f3c-8a16-1232d9fcceb7")
                         },
                         new
                         {
@@ -137,7 +140,7 @@ namespace Shop.Storage.Migrations
                             CreatedOn = new DateTime(2025, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CustomerId = 2,
                             Status = 0,
-                            Uid = new Guid("8efddfd5-734e-4d14-89a7-48c83661aee8")
+                            Uid = new Guid("c0177445-a2e6-4883-a378-7d227edc7758")
                         },
                         new
                         {
@@ -145,7 +148,7 @@ namespace Shop.Storage.Migrations
                             CreatedOn = new DateTime(2025, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CustomerId = 2,
                             Status = 2,
-                            Uid = new Guid("292ae322-532d-426b-b765-9ea97a2b47e6")
+                            Uid = new Guid("d8e2fcaa-c774-47ab-8f27-c526aa9a7a6c")
                         },
                         new
                         {
@@ -154,7 +157,7 @@ namespace Shop.Storage.Migrations
                             CustomerId = 2,
                             DeletedOn = new DateTime(2025, 11, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = 0,
-                            Uid = new Guid("f7176ed9-924e-4f9b-8879-fa2b53aed3e5")
+                            Uid = new Guid("513c1ca0-6c62-4126-8d76-58ba231f5412")
                         },
                         new
                         {
@@ -162,15 +165,7 @@ namespace Shop.Storage.Migrations
                             CreatedOn = new DateTime(2025, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CustomerId = 1,
                             Status = 0,
-                            Uid = new Guid("7061f141-ed24-4b4c-af2f-cbce97e8aae9")
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedOn = new DateTime(2025, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CustomerId = 2,
-                            Status = 1,
-                            Uid = new Guid("1c0752cc-fb3c-4878-a13d-69b601f793c9")
+                            Uid = new Guid("87a85d45-9aa8-405e-9a16-c443819f14b0")
                         });
                 });
 
@@ -226,7 +221,7 @@ namespace Shop.Storage.Migrations
                             Price = 499.99m,
                             ProductId = 1,
                             Quantity = 2,
-                            Uid = new Guid("bf8b66ac-c701-4117-b73c-3c231f1d73a0")
+                            Uid = new Guid("0a4ddebb-72b6-433a-aa6e-06a19f6fc9fb")
                         },
                         new
                         {
@@ -236,7 +231,7 @@ namespace Shop.Storage.Migrations
                             Price = 999.99m,
                             ProductId = 2,
                             Quantity = 1,
-                            Uid = new Guid("e5993fa1-4999-455b-8af9-c665340bc0c2")
+                            Uid = new Guid("415d1c0d-304d-42e2-9aa0-0f582913238a")
                         },
                         new
                         {
@@ -246,7 +241,7 @@ namespace Shop.Storage.Migrations
                             Price = 2999.99m,
                             ProductId = 3,
                             Quantity = 1,
-                            Uid = new Guid("fff28a7f-d481-496d-96e0-917a1ef7f24d")
+                            Uid = new Guid("e5a4d129-6694-4d1b-a438-5000960c9e8e")
                         },
                         new
                         {
@@ -256,7 +251,7 @@ namespace Shop.Storage.Migrations
                             Price = 399.99m,
                             ProductId = 1,
                             Quantity = 3,
-                            Uid = new Guid("31e9d67e-f7c4-478b-b280-9a96da9e9804")
+                            Uid = new Guid("5a0c6f64-400d-4e76-a35c-caeebfbd8989")
                         },
                         new
                         {
@@ -266,7 +261,7 @@ namespace Shop.Storage.Migrations
                             Price = 1499.99m,
                             ProductId = 2,
                             Quantity = 1,
-                            Uid = new Guid("657e62cf-dfdc-4daf-9075-a6f5053d4361")
+                            Uid = new Guid("dc41cf2a-6baf-4f16-a418-6a480f268bae")
                         },
                         new
                         {
@@ -276,7 +271,7 @@ namespace Shop.Storage.Migrations
                             Price = 31049.99m,
                             ProductId = 4,
                             Quantity = 1,
-                            Uid = new Guid("7a369ae8-29fb-4e88-ac01-b00cebdd3a10")
+                            Uid = new Guid("e4d4f16c-3374-4e08-911a-6a9240b1de3d")
                         },
                         new
                         {
@@ -286,7 +281,7 @@ namespace Shop.Storage.Migrations
                             Price = 34999.99m,
                             ProductId = 4,
                             Quantity = 1,
-                            Uid = new Guid("7e8be5e0-c1f2-44fc-b530-59d893407c31")
+                            Uid = new Guid("4007a55e-fff8-4f78-bedb-787da3475a23")
                         },
                         new
                         {
@@ -296,7 +291,7 @@ namespace Shop.Storage.Migrations
                             Price = 34999.99m,
                             ProductId = 4,
                             Quantity = 2,
-                            Uid = new Guid("e1fbf861-3d6b-4208-9730-e11a4d8a10b1")
+                            Uid = new Guid("27590886-b01a-4895-8e1e-f00567d0383c")
                         },
                         new
                         {
@@ -306,87 +301,7 @@ namespace Shop.Storage.Migrations
                             Price = 3499.99m,
                             ProductId = 3,
                             Quantity = 1,
-                            Uid = new Guid("781abe5d-d197-409e-ae82-56b5b7d4d3ad")
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreatedOn = new DateTime(2025, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderId = 6,
-                            Price = 9999.99m,
-                            ProductId = 5,
-                            Quantity = 1,
-                            Uid = new Guid("ba857fbe-fff0-48fb-bae8-81ab3dbdfd75")
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CreatedOn = new DateTime(2025, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderId = 6,
-                            Price = 3499.99m,
-                            ProductId = 6,
-                            Quantity = 2,
-                            Uid = new Guid("6a6eb388-4b2f-4ab8-8813-404212c55e55")
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CreatedOn = new DateTime(2025, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderId = 6,
-                            Price = 1199.99m,
-                            ProductId = 7,
-                            Quantity = 4,
-                            Uid = new Guid("85e10880-0b87-417d-a30e-fc66f18f8e1e")
-                        },
-                        new
-                        {
-                            Id = 13,
-                            CreatedOn = new DateTime(2025, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderId = 7,
-                            Price = 199.99m,
-                            ProductId = 8,
-                            Quantity = 4,
-                            Uid = new Guid("c756a242-a91f-4fc9-8062-c557f165c1ab")
-                        },
-                        new
-                        {
-                            Id = 14,
-                            CreatedOn = new DateTime(2025, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderId = 7,
-                            Price = 8999.99m,
-                            ProductId = 9,
-                            Quantity = 1,
-                            Uid = new Guid("27a2f51b-bd57-44af-8984-47d0f27ed8e4")
-                        },
-                        new
-                        {
-                            Id = 15,
-                            CreatedOn = new DateTime(2025, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderId = 7,
-                            Price = 12999.99m,
-                            ProductId = 10,
-                            Quantity = 1,
-                            Uid = new Guid("c24fa34b-71f8-4a15-b344-c15af876a951")
-                        },
-                        new
-                        {
-                            Id = 16,
-                            CreatedOn = new DateTime(2025, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderId = 7,
-                            Price = 49999.99m,
-                            ProductId = 11,
-                            Quantity = 1,
-                            Uid = new Guid("5e12c4d7-2e9a-4fd5-aec9-4ef7614f1f98")
-                        },
-                        new
-                        {
-                            Id = 17,
-                            CreatedOn = new DateTime(2025, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderId = 7,
-                            Price = 39999.99m,
-                            ProductId = 12,
-                            Quantity = 1,
-                            Uid = new Guid("036440a5-2b83-4f41-96f8-7b7c85bb9d40")
+                            Uid = new Guid("899aa8ea-7e02-4e6a-ad79-86b24e962b76")
                         });
                 });
 
@@ -429,7 +344,7 @@ namespace Shop.Storage.Migrations
                             CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Knjiga",
                             Price = 499.99m,
-                            Uid = new Guid("2b4ef0b3-8fe5-46f6-ad73-979b2036481d")
+                            Uid = new Guid("9a5dbacd-111d-44b4-ab30-2d8a48d8feb7")
                         },
                         new
                         {
@@ -437,7 +352,7 @@ namespace Shop.Storage.Migrations
                             CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Lampa",
                             Price = 1499.99m,
-                            Uid = new Guid("17b6e705-9dd0-44f8-a3a0-73865f93c3cc")
+                            Uid = new Guid("51ccb483-5d77-4aea-a0df-2bf42a1b122e")
                         },
                         new
                         {
@@ -445,7 +360,7 @@ namespace Shop.Storage.Migrations
                             CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Slusalice",
                             Price = 2999.99m,
-                            Uid = new Guid("80f16508-4180-4498-81d6-a630bff4a4b5")
+                            Uid = new Guid("33f4c890-dd02-4843-9897-b55594ccd64d")
                         },
                         new
                         {
@@ -453,71 +368,7 @@ namespace Shop.Storage.Migrations
                             CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Telefon",
                             Price = 31049.99m,
-                            Uid = new Guid("01007967-7b47-47fc-9e3d-d54af30df201")
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Patike",
-                            Price = 9999.99m,
-                            Uid = new Guid("f94b3625-d49a-4ac4-baf3-5c554d35283f")
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Pantalone",
-                            Price = 4499.99m,
-                            Uid = new Guid("3dfe09c1-e497-4833-94eb-ac171ad95e5a")
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Majica",
-                            Price = 1199.99m,
-                            Uid = new Guid("ffda6fd2-11a1-4cf0-8f35-195a813332b9")
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Tanjir",
-                            Price = 299.99m,
-                            Uid = new Guid("ad1efbd0-c5a2-42ff-b129-156f3065d25c")
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jakna",
-                            Price = 8999.99m,
-                            Uid = new Guid("71bb50cd-63e2-4cb2-ab69-5c7c3c56efe8")
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Stolica",
-                            Price = 11999.99m,
-                            Uid = new Guid("0fa7f9db-8990-4eed-bab7-3f2184b99c55")
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Televizor",
-                            Price = 54999.99m,
-                            Uid = new Guid("461d8e13-3f11-44f5-a678-6d86b55d6377")
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CreatedOn = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Krevet",
-                            Price = 39999.99m,
-                            Uid = new Guid("8046aaa7-b16f-47bd-9350-bf308c173375")
+                            Uid = new Guid("96044c8a-1bc7-4c40-80d4-f9a3de4eea9e")
                         });
                 });
 

@@ -7,6 +7,18 @@
 	{
 		public Product() { }
 
+		public Product(
+			int id,
+			Guid uid,
+			DateTime createdOn,
+			DateTime? deletedOn,
+			decimal price,
+			string name) : base(id, uid, createdOn, deletedOn)
+		{
+			Price = price;
+			Name = name;
+		}
+
 		public decimal Price { get; private set; }
 
 		public string Name { get; private set; }

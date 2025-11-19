@@ -2,8 +2,14 @@
 {
 	public class GetOpenOrdersRequest
 	{
-		public DateTime FromDate { get; set; }
+		public DateTime FromDate { get; }
 
-		public DateTime ToDate { get; set; }
+		public DateTime ToDate { get; }
+
+		public GetOpenOrdersRequest(DateTime fromDate, DateTime toDate) 
+		{
+			FromDate = fromDate;
+			ToDate = toDate;
+		}
 	}
 }
