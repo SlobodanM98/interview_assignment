@@ -13,7 +13,7 @@
 		{
 			if (request.FromDate > request.ToDate)
 			{
-				return Result<IEnumerable<OrderDto>>.Invalid<IEnumerable<OrderDto>>(ResultCodes.INVALID_DATE_VALUES);
+				return Result<IEnumerable<OrderDto>>.Invalid<IEnumerable<OrderDto>>(ResultCodes.ORDER_INVALID_DATE_VALUES);
 			}
 
 			return Result<IEnumerable<OrderDto>>.Ok(

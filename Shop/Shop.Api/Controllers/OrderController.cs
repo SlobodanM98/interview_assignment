@@ -8,7 +8,7 @@
 	public class OrderController(IOrderService orderService) : ExtendedApiController
 	{
 		[HttpPost("list/open")]
-		public async Task<IActionResult> GetOpenOrders([FromBody]GetOpenOrdersRequest request)
+		public async Task<IActionResult> GetOpenOrdersAsync([FromBody]GetOpenOrdersRequest request)
 		{
 			return OkOrError(
 				await orderService.GetOpenOrders(request));

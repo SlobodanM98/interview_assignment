@@ -15,7 +15,7 @@
 				return errorResponse;
 			}
 
-			return Ok(result);
+			return Ok(result.Value);
 		}
 
 		protected IActionResult OkOrError(Result result)
@@ -36,7 +36,7 @@
 			{
 				ObjectResult errorResponse = new(result.Message)
 				{
-					StatusCode = (int)result.HttpStatusCode
+					StatusCode = (int)result.GetHttpStatusCode()
 				};
 
 				return errorResponse;

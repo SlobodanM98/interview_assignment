@@ -68,13 +68,20 @@ namespace Shop.Contracts.Common
 			return new Result(ResultType.NotFound, message);
 		}
 
-		public HttpStatusCode HttpStatusCode => ResultType switch
+		public HttpStatusCode GetHttpStatusCode()
 		{
-			ResultType.Ok => HttpStatusCode.OK,
-			ResultType.NotFound => HttpStatusCode.NotFound,
-			ResultType.Invalid => HttpStatusCode.NotAcceptable,
-			_ => HttpStatusCode.InternalServerError,
-		};
+			switch (ResultType)
+			{
+				case ResultType.Ok:
+					return HttpStatusCode.OK;
+				case ResultType.NotFound:
+					return HttpStatusCode.NotFound;
+				case ResultType.Invalid:
+					return HttpStatusCode.NotAcceptable;
+				default:
+					return HttpStatusCode.InternalServerError;
+			}
+		}
 	}
 
 	public class Result<T> : Result

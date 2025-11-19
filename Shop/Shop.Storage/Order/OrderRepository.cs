@@ -13,6 +13,7 @@
 		public async Task<IEnumerable<OrderDto>> GetOpenOrders(DateTime from, DateTime to)
 		{
 			return await dbContext.Set<Order>()
+				.AsNoTracking()
 				.Where(x => x.DeletedOn == null
 								&& x.CreatedOn >= from
 									&& x.CreatedOn <= to

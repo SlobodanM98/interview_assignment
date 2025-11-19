@@ -10,7 +10,13 @@ namespace Shop.Domain.Common
 	{
 		#region Order
 
-		public const string INVALID_DATE_VALUES = "INVALID_DATE_VALUES";
+		public const string ORDER_INVALID_DATE_VALUES = "ORDER_INVALID_DATE_VALUES";
+
+		#endregion
+
+		#region Product
+
+		public const string PRODUCT_INVALID_FILTER_VALUE = "PRODUCT_INVALID_FILTER_VALUE";
 
 		#endregion
 	}
