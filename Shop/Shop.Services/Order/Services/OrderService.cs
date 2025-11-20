@@ -11,7 +11,7 @@
 	{
 		public async Task<Result<IEnumerable<OrderDto>>> GetOpenOrders(GetOpenOrdersRequest request)
 		{
-			if (request.FromDate > request.ToDate)
+			if (request.FromDate == default || request.ToDate == default || request.FromDate > request.ToDate)
 			{
 				return Result<IEnumerable<OrderDto>>.Invalid<IEnumerable<OrderDto>>(ResultCodes.ORDER_INVALID_DATE_VALUES);
 			}

@@ -8,7 +8,7 @@
 	public class ProductController(IProductService productService) : ExtendedApiController
 	{
 		[HttpPost("list/top-ten")]
-		public async Task<IActionResult> GetTopTenProductsByVolumeSoldAsync([FromBody]GetTopTenProductsRequest request)
+		public async Task<IActionResult> GetTopTenProductsAsync([FromBody]GetTopTenProductsRequest request)
 		{
 			return OkOrError(
 				await productService.GetTopTenProducts(request));

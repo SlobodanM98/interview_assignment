@@ -95,7 +95,7 @@ namespace Shop.Contracts.Common
 			Value = value;
 		}
 
-		private Result(ResultType resultType, bool isFailure, string message) : base(resultType, isFailure, message)
+		private Result(ResultType resultType, string message) : base(resultType, isFailure: true, message)
 		{
 			Value = Empty;
 		}
@@ -107,17 +107,17 @@ namespace Shop.Contracts.Common
 
 		public static Result<T> Failed<T>(string message)
 		{
-			return new Result<T>(ResultType.InternalError, isFailure: true, message);
+			return new Result<T>(ResultType.InternalError, message);
 		}
 
 		public static Result<T> Invalid<T>(string message)
 		{
-			return new Result<T>(ResultType.Invalid, isFailure: true, message);
+			return new Result<T>(ResultType.Invalid, message);
 		}
 
 		public static Result<T> NotFound<T>(string message)
 		{
-			return new Result<T>(ResultType.NotFound, isFailure: true, message);
+			return new Result<T>(ResultType.NotFound, message);
 		}
 	}
 }
